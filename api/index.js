@@ -30,7 +30,7 @@ app.use('/api/rooms', authRoute)
 
 
 
-app.listen(5001, () => {
+app.listen(8800, () => {
   connect();
   console.log("connected to backend");
 });
