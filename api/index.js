@@ -17,7 +17,9 @@ const connect = async () => {
 mongoose.connection.on("disconnected", () => {
     console.log('mongoDB disconnected')
 })
-//
+
+// middleware
+app.use('/auth', authRoute)
 
 
 app.listen(5001, () => {
