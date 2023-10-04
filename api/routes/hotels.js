@@ -15,6 +15,15 @@ router.post('/', async (req, res) => {
     }
 })
 // update
+router.put('/:id', async (req, res) => {
+    try {
+        const updatedHotel = await newHotel.save()
+        res.status(200).json(savedHotel)
+    } catch (err) {
+        res.status(500).json(err)
+    }
+})
+
 // delete 
 // get
 // get all
